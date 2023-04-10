@@ -6,5 +6,5 @@ def hello_world():
     return 'Hello, World!'
 @app.route('/weather')
 def conv_weather_apt():
-    url="http://api.openweathermap.org/data/2.5/air_pollution/history?lat=508&lon=50&start=1606223802&end=1606482999&appid=84511fdebb693f2a434a8e4094e3dc5e"
+    url="https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=767ab06d4aae399b47d43e6ef88df834"
     return url
