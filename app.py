@@ -20,7 +20,7 @@ def conv_weather_apt():
     pressure = data['main']['pressure']
     humidity = data['main']['humidity']
     wind_speed = data['wind']['speed']
-    my_json_string = json.dumps({'Latitude': latitude, 'Longitude': longitude,'Temp':temp, 'Pressure':pressure,'humidity':humidity,'Wind_speed':wind_speed})
+    my_json_string = json.dumps({'Lat': latitude, 'Long': longitude,'Temp':temp, 'Pres':pressure,'Hum':humidity,'Wind':wind_speed})
     #print("Latitude:%s,Longitude:%s,Temp:%s,Pressure:%s,humidity:%s,Wind_speed:%s"%(latitude,longitude,temp,pressure,humidity,wind_speed))
     #print(my_json_string)
     return my_json_string
