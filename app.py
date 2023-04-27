@@ -25,21 +25,21 @@ def conv_weather_apt():
     #print(my_json_string)
     return my_json_string
 
-# @app.route('/airpollution')
-# def air_pollution():
-#     x = requests.get('https://api.openweathermap.org/data/2.5/air_pollution?lat=23.682359&lon=87.613932&appid=767ab06d4aae399b47d43e6ef88df834')
-#     #print(x.status_code)
-#     data = x.json()
-#     #print(data)
+@app.route('/airpollution')
+def air_pollution():
+    x = requests.get('https://api.openweathermap.org/data/2.5/air_pollution?lat=23.682359&lon=87.613932&appid=767ab06d4aae399b47d43e6ef88df834')
+    #print(x.status_code)
+    data = x.json()
+    #print(data)
     
-#     PM2_5 = data['list'][0]['components']['pm2_5']
-#     PM10 = data['list'][0]['components']['pm10']
-#     SO2 = data['list'][0]['components']['so2']
-#     NO2 = data['list'][0]['components']['no2']
-#     CO = data['list'][0]['components']['co']
-#     O3 = data['list'][0]['components']['o3']
-#     AQI = data['list'][0]['main']['aqi']
-#     my_json_string = json.dumps({'PM2_5': PM2_5, 'PM10': PM10,'SO2':SO2, 'NO2':NO2,'CO':CO,'O3':O3,'AQI':AQI})
-#     #print("Latitude:%s,Longitude:%s,Temp:%s,Pressure:%s,humidity:%s,Wind_speed:%s"%(latitude,longitude,temp,pressure,humidity,wind_speed))
+    PM2_5 = data['list'][0]['components']['pm2_5']
+    PM10 = data['list'][0]['components']['pm10']
+    SO2 = data['list'][0]['components']['so2']
+    NO2 = data['list'][0]['components']['no2']
+    CO = data['list'][0]['components']['co']
+    O3 = data['list'][0]['components']['o3']
+    AQI = data['list'][0]['main']['aqi']
+    my_json_string = json.dumps({'PM2_5': PM2_5, 'PM10': PM10,'SO2':SO2, 'NO2':NO2,'CO':CO,'O3':O3,'AQI':AQI})
+    #print("Latitude:%s,Longitude:%s,Temp:%s,Pressure:%s,humidity:%s,Wind_speed:%s"%(latitude,longitude,temp,pressure,humidity,wind_speed))
    
-#     return my_json_string
+    return my_json_string
