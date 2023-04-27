@@ -41,5 +41,5 @@ def air_pollution():
     AQI = data['list'][0]['main']['aqi']
     my_json_string = json.dumps({'PM2_5': PM2_5, 'PM10': PM10,'SO2':SO2, 'NO2':NO2,'CO':CO,'O3':O3,'AQI':AQI})
     #print("Latitude:%s,Longitude:%s,Temp:%s,Pressure:%s,humidity:%s,Wind_speed:%s"%(latitude,longitude,temp,pressure,humidity,wind_speed))
-    #print(my_json_string)
+   
     return my_json_string
